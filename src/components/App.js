@@ -81,7 +81,9 @@ function App() {
   useEffect(() => {
     async function get_data() {
       try {
-        const data = await fetch("http://localhost:8000/questions");
+        const data = await fetch(
+          "https://react-quiz-data-1.onrender.com/questions"
+        );
         const res = await data.json();
         dispatch({ type: "dataReceived", payload: res });
       } catch (err) {
