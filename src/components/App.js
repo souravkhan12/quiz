@@ -49,7 +49,12 @@ function reducer(state, action) {
       };
 
     case "nextQuestion":
-      return { ...state, index: state.index + 1, answer: null };
+      return {
+        ...state,
+        index: state.index + 1,
+        status: state.index >= 14 ? "finished" : state.status,
+        answer: null,
+      };
 
     case "Restart":
       return {

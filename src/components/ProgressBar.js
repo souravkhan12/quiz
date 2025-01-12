@@ -8,7 +8,7 @@ function ProgressBar({ index, numQuestion, points, totalPoints }) {
         Question <strong>{index}</strong> / {numQuestion}
       </p>
       <p>
-        <strong>{points}</strong> / {totalPoints}
+        <strong> Score : {points}</strong> / {totalPoints}
       </p>
     </header>
   );
