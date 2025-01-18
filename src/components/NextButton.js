@@ -1,6 +1,8 @@
 import React from "react";
+import { useQuiz } from "./context/QuizContext";
 
-function NextButton({ dispatch, answer }) {
+function NextButton() {
+  const { dispatch, answer } = useQuiz();
   if (answer == null) return null;
   return (
     <div
